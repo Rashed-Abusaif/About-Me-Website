@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/gmu.png" />
+    <title>Skills</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <h1>My Skills</h1>
+    <div style="padding-left: 5%; padding-right: 5%">
+      <button class="accordion">Analytics</button>
+      <div class="panel">
+        <p>
+          With my major revolving around data analytics, I've picked up a few
+          skills along the way. I am proficient in the following:
+        </p>
+        <ul>
+          <li>Microsoft Excel</li>
+          <li>Microsoft Access</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <button class="accordion">HTML</button>
+      <div class="panel">
+        <p>I am able to create HTML pages with a good understanding of:</p>
+        <ul>
+          <li>Bootstrap</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+
+      <button class="accordion">Automotive Repair</button>
+      <div class="panel">
+        <p>
+          I grew up working on cars and love learning about how they work. I
+          have experience working on:
+        </p>
+        <ul>
+          <li>Honda</li>
+          <li>Subaru</li>
+          <li>Volkswagen</li>
+          <li>BMW</li>
+        </ul>
+      </div>
+      <button class="accordion">Fitness and Nutrition</button>
+      <div class="panel">
+        <p>
+          Growing up, bodybuilding was always a hobby of mine. After some time,
+          I accumulated enough experience and knowledge about it to start
+          training some close family and friends. My favorite workouts are:
+        </p>
+        <ul>
+          <li>Dumbell Inclined Bench Press</li>
+          <li>Barbell Bent Over Rows</li>
+          <li>Squats</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
